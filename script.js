@@ -126,7 +126,7 @@ console.log(abhay);
 
 
 
-
+/*
 //includes() and typeof()
 
 const yearOfBirth = [2009, 2017, 1993, 1999];
@@ -147,8 +147,17 @@ if(yearOfBirth.includes(1993)) {
 } else {
 	console.log(`The array doesn't has 1993`);
 }
+*/
 
 
+
+//require() and export()
+
+var dishes = require('./dishes');
+
+dishes.makePizza();
+
+console.log(`My favourite dish is ${dishes.favDish}`);
 
 
 
