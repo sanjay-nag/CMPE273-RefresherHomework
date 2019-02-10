@@ -408,21 +408,23 @@ getWeather(44418);
 
 
 
-
+/*
 //Local Storage
 
 document.getElementById('myFrame').addEventListener('load', () => {
 	if (typeof (Storage) !== 'undefined') {
-		if (localStorage.lastVisit3) {
-			document.getElementById('last-visit').innerHTML = 'Your last visit: ' + localStorage.lastVisit3.slice(0, 24);
+		if (localStorage.lastVisit) {
+			document.getElementById('last-visit').innerHTML = 'Your last visit: ' + localStorage.lastVisit.slice(0, 24);
 		} else {
 			document.getElementById('last-visit').innerHTML = 'Seems you\'re a first time visitor';
 		}
-		localStorage.lastVisit3 = new Date();
+		localStorage.lastVisit = new Date();
 	} else {
 		document.getElementById('last-visit').innerHTML = 'Sorry, your browser does not support web storage...';
 	}
 });
+*/
+
 
 
 
