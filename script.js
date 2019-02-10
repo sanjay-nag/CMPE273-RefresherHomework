@@ -102,7 +102,7 @@ getItemDetailByItemId(itemId).then(itemDetals => {
 
 
 
-
+/*
 //Default Parameters
 
 function Nagas(
@@ -122,6 +122,31 @@ var abhay = new Nagas('Abhay', 1996, 'Rangan', 'American');
 
 console.log(sanjay);
 console.log(abhay);
+*/
+
+
+
+
+//includes() and typeof()
+
+const yearOfBirth = [2009, 2017, 1993, 1999];
+const age = [];
+
+const calculateAge = () => {
+	for(let element of yearOfBirth) {
+		if(typeof(element) === 'number') {
+			age.push(new Date().getFullYear() - element);
+		}
+	}
+}
+calculateAge();
+console.log(age);
+
+if(yearOfBirth.includes(1993)) {
+	console.log(`The array has 1993`);
+} else {
+	console.log(`The array doesn't has 1993`);
+}
 
 
 
