@@ -238,7 +238,7 @@ vishnu.calculateAge();
 
 
 
-
+/*
 //Object.assign()
 
 let firstName = {FirstName: 'Sanjay'};
@@ -248,8 +248,25 @@ let yearOfBirth = {YearOfBirth: 1993};
 const sanjay = Object.assign(firstName, lastName, yearOfBirth);
 
 console.log(sanjay);
+*/
 
 
+
+//Static methods
+
+class Person {
+	constructor(name, yearOfBirth, job) {
+		this.name = name;
+		this.yearOfBirth = yearOfBirth;
+		this.job = job;
+	}
+
+	static greet() {
+		console.log('Hey there!');
+	}
+}
+const sanjay = new Person('Sanjay', 1993, 'Student');
+Person.greet();
 
 
 
