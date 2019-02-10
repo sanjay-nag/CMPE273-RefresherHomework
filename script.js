@@ -307,6 +307,7 @@ sanjay.wonGrammy();
 
 
 
+/*
 //Method overriding
 
 class Person {
@@ -342,6 +343,72 @@ class Artist extends Person {
 const sanjay = new Artist('Sanjay', 1993, 'Carnatic Vocalist', 10, 5);
 
 sanjay.doSomething();
+*/
+
+
+
+//get
+
+const readline = require('readline');
+const readLineInterface = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+class Meal {
+	constructor(fatIntake, carbohydrateIntake) {
+		this.fatIntake = fatIntake;
+		this.carbohydrateIntake = carbohydrateIntake;
+	}
+	get calorieIntake() {
+		return (this.fatIntake + this.carbohydrateIntake) * (5/2);
+	}
+	get mealSummary() {
+		console.log(`Fat intake: ${this.fatIntake}, Carb intake: ${this.carbohydrateIntake} : Total calorie intake: ${this.calorieIntake}`);
+	}
+}
+
+let breakfast = new Meal(2,2);
+breakfast.mealSummary;
+
+console.log('Update new calorie intake');
+readLineInterface.on('line', (input) => {
+	breakfast.fatIntake = parseInt(input);
+	console.log('The updated fat intake:');
+	breakfast.mealSummary;
+	readLineInterface.close();
+});
+
+
+
+/* const readline = require('readline');
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+var employee = {
+	hours: 40,
+	wage: 45,
+	get salary() {
+		return this.hours * this.wage;
+	},
+	get print() {
+		return "Hours:" + this.hours + " ,wage:" + this.wage + " ,salary:" + this.salary;
+	}
+};
+
+console.log("The current status of the employee :")
+console.log(employee.print)
+
+console.log("Update new working hours of the Employee");
+rl.on('line', (input) => {
+	input = input.trim();
+	employee.hours = parseInt(input)
+	console.log("The updated status of the employee :")
+	console.log(employee.print)
+	rl.close();
+}); */
 
 
 
