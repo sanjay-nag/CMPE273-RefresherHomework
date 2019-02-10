@@ -17,7 +17,7 @@ isShuddhaMadhyamaRaga(ChalaNataRaga);
 
 
 
-
+/*
 //Events
 
 document.querySelector('.mouse-click').addEventListener('click', () => {
@@ -35,3 +35,19 @@ document.querySelector('.mouse-hover').addEventListener('mouseout', ()  => {
 document.querySelector('.key-copy').addEventListener('copy', ()  => {
 	document.getElementById('key-copy-output').innerHTML = '<b>Plagiarism alert!!</b>';
 });
+*/
+
+
+
+
+
+//Arrays
+
+const ragas = ['Megharanjani', 'Manoranjani', 'Kalyani', 'Chittaranjani', 'Mohana', 'Sivaranjani'];
+
+ragas.forEach(raga => {
+	if(raga.includes('ranjani')) {
+		console.log(raga);
+	}
+});
+
