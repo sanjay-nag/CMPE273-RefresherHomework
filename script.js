@@ -1,3 +1,4 @@
+/* 
 //Functions
 
 //Legend: S - Sa, R - Ri, G - Ga, M - Ma, P - Pa, D - Da, N - Ni 
@@ -12,3 +13,6 @@ const isShuddhaMadhyamaRaga = (raga) => {
 isShuddhaMadhyamaRaga(MohanaRaga);
 isShuddhaMadhyamaRaga(NatakaPriyaRaga);
 isShuddhaMadhyamaRaga(ChalaNataRaga);
+*/
+
+
