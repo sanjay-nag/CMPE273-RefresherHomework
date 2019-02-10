@@ -427,8 +427,17 @@ document.getElementById('myFrame').addEventListener('load', () => {
 
 
 
+//Geo Location
 
-
+document.getElementById('accessLocation').addEventListener('click', () => {
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition((position => {
+			document.getElementById('yourLocation').innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude
+		}));
+	} else {
+		document.getElementById('yourLocation').innerHTML = "Geolocation is not supported by this browser.";
+	}
+});
 
 
 

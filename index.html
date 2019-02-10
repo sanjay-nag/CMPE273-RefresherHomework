@@ -6,39 +6,11 @@
 	</head>
 
     <body>
-        <h3>USA Election Registration Form</h3>
-        <form action="" id="elctionForm">
-            First name: <br>
-            <input type="text" name="firstName" required autofocus><br>
-            Last name: <br>
-            <input type="text" name="lastName" required><br>
-            Date of birth: <br>
-            <input type="date" name="dateOfBirth" required><br>
-            Passport No : <br>
-            <input type="text" name="passportNumber" pattern="[A-Za-z0-9]{10}" title="Ten letter valid Passport number" required><br>
-            E-mail: <br>
-            <input type="email" name="emailaddress" autocomplete="on" ><br>
-            Contact: <br>
-            <input type = "text" name="contact" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Enter phone number fomrat in 012-345-6789"><br>
-            Sex<br>
-            <input type="radio" name="gender" value="male" checked> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> Other<br>
-            States: <br>
-            <input list="states" name="states">
-                <datalist id="states">
-                    <option value="California">
-                    <option value="Arizona">
-                    <option value="Ohio">
-                    <option value="Illinois">
-                    <option value="Nevada">
-                    <option value="Dallas">
-                    <option value="Georgia"> 
-                </datalist>
-            <br>
-            
-            <input type="submit" value="Submit"><br>
-        </form>
+        <h3>Geo location</h3>
+        <button id='accessLocation'>Allow Access</button>
+        <p id='yourLocation'></p>
+
+        
 
 	<script src="script.js"></script>
     </body>
