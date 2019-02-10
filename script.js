@@ -39,7 +39,6 @@ document.querySelector('.key-copy').addEventListener('copy', ()  => {
 
 
 
-
 /*
 //Arrays
 
@@ -51,8 +50,6 @@ ragas.forEach(raga => {
 	}
 });
 */
-
-
 
 
 
@@ -69,8 +66,7 @@ console.log(`\'${array[0]}\' found at position ${parseInt(array.index)+1}`)
 
 
 
-
-
+/*
 //Strict mode
 
 myFriendsName = 'Ashok';
@@ -80,7 +76,24 @@ console.log(`My friend\'s name: ${myFriendsName}`);
 	myName = 'Sanjay';
 	console.log(`My name: ${myName}`);
 })();
+*/
 
 
 
+//Error
 
+const getItemDetailByItemId = itemId => {
+	return new Promise((resolve, reject) => {
+		setTimeout(itemId => {
+			reject(`No matching Item for ItemId: ${itemId}`)
+		}, 2000, itemId);
+	});
+}
+
+const itemId = 'AWEQ88899912';
+
+getItemDetailByItemId(itemId).then(itemDetals => {
+	console.log(`ItemDetails: ${itemDetals}`);
+}).catch(error => {
+	console.log(`Error occurred: ${error}`);
+});
