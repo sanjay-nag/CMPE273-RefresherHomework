@@ -163,6 +163,7 @@ console.log(`My favourite dish is ${dishes.favDish}`);
 
 
 
+/*
 //Type conversions
 
 const typeConversions = () => {
@@ -178,6 +179,31 @@ const typeConversions = () => {
 }
 
 typeConversions();
+*/
+
+
+
+//JSON
+
+const personJson = [];
+let firstName, lastName, yearOfBirth;
+
+const n = prompt('Enter the number of persons you are going to enter');
+
+for(let i = 0; i < n; i++) {
+	firstName = prompt('Enter the first name of person '+ (i+1));
+	lastName = prompt('Enter the last name of person '+ (i+1));
+	yearOfBirth = prompt('Enter the year of birth of person '+ (i+1));
+
+	var person = {
+		'FirstName': firstName,
+		'LastName': lastName,
+		'YearOfBirth': yearOfBirth
+	}
+	personJson.push(person);
+}
+
+console.log(personJson);
 
 
 
