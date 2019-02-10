@@ -183,6 +183,7 @@ typeConversions();
 
 
 
+/*
 //JSON
 
 const personJson = [];
@@ -204,10 +205,34 @@ for(let i = 0; i < n; i++) {
 }
 
 console.log(personJson);
+*/
 
 
 
+//Classes
 
+class Person {
+
+	constructor(firstName, lastName, yearOfBirth) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.yearOfBirth = yearOfBirth;
+	}
+
+	calculateAge() {
+		console.log(`${new Date().getFullYear() - this.yearOfBirth}`);
+	}
+}
+
+
+let sanjay = new Person('Sanjay', 'Nag', 1993);
+sanjay.calculateAge();
+
+let abhay = new Person('Abhay', 'Rangan', 1995);
+abhay.calculateAge();
+
+let vishnu = new Person('Vishnu', 'Vardhana', 1994);
+vishnu.calculateAge();
 
 
 
