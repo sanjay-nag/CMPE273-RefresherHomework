@@ -347,6 +347,7 @@ sanjay.doSomething();
 
 
 
+/*
 //get
 
 const readline = require('readline');
@@ -378,37 +379,34 @@ readLineInterface.on('line', (input) => {
 	breakfast.mealSummary;
 	readLineInterface.close();
 });
+*/
 
 
 
-/* const readline = require('readline');
-const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout
-});
 
-var employee = {
-	hours: 40,
-	wage: 45,
-	get salary() {
-		return this.hours * this.wage;
-	},
-	get print() {
-		return "Hours:" + this.hours + " ,wage:" + this.wage + " ,salary:" + this.salary;
-	}
-};
+//fetch
 
-console.log("The current status of the employee :")
-console.log(employee.print)
+function getWeather(whereOnEarthId) {
+	fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${whereOnEarthId}/`)
+	.then(result => {
+		return result.json();
+	})
+	.then(data => {
+		const today = data.consolidated_weather[0];
+		console.log(`Temperatures today in ${data.title} stay between ${today.min_temp} and ${today.max_temp}.`);
+	})
+	.catch(error => {
+		console.log(error);
+	});
+}
 
-console.log("Update new working hours of the Employee");
-rl.on('line', (input) => {
-	input = input.trim();
-	employee.hours = parseInt(input)
-	console.log("The updated status of the employee :")
-	console.log(employee.print)
-	rl.close();
-}); */
+//San Francisco
+getWeather(2487956);
+//London
+getWeather(44418);
+
+
+
 
 
 
