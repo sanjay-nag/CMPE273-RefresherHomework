@@ -251,7 +251,7 @@ console.log(sanjay);
 */
 
 
-
+/*
 //Static methods
 
 class Person {
@@ -267,7 +267,41 @@ class Person {
 }
 const sanjay = new Person('Sanjay', 1993, 'Student');
 Person.greet();
+*/
 
+
+
+//Inheritence using sub-classes
+
+class Person {
+	constructor(name, yearOfBirth, job) {
+		this.name = name;
+		this.yearOfBirth = yearOfBirth;
+		this.job = job;
+	}
+	calculateAge() {
+		var age = new Date().getFullYear() - this.yearOfBirth;
+		console.log(age);
+	}
+}
+
+class Artist extends Person {
+	constructor(name, yearOfBirth, job, noOfAlbums, noOfGrammys) {
+		super(name, yearOfBirth, job);
+		this.noOfAlbums = noOfAlbums;
+		this.noOfGrammys = noOfGrammys;
+	}
+
+	wonGrammy() {
+		this.noOfGrammys++;
+		console.log(this.noOfGrammys);
+	}
+}
+
+const sanjay = new Artist('Sanjay', 1993, 'Carnatic Vocalist', 10, 5);
+
+sanjay.calculateAge();
+sanjay.wonGrammy();
 
 
 
