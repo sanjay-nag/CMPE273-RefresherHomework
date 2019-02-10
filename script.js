@@ -151,6 +151,7 @@ if(yearOfBirth.includes(1993)) {
 
 
 
+/*
 //require() and export()
 
 var dishes = require('./dishes');
@@ -158,6 +159,28 @@ var dishes = require('./dishes');
 dishes.makePizza();
 
 console.log(`My favourite dish is ${dishes.favDish}`);
+*/
+
+
+
+//Type conversions
+
+const typeConversions = () => {
+	console.log('5'+2);
+
+	//Convert number to string
+	const pi = 3.14;
+	console.log(typeof(String(pi)));
+	
+	//Convert string to number
+	const year = '1993';
+	console.log(typeof(parseInt(year)));
+}
+
+typeConversions();
+
+
+
 
 
 
