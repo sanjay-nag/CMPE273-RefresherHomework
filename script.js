@@ -271,7 +271,8 @@ Person.greet();
 
 
 
-//Inheritence using sub-classes
+/*
+//Inheritance using sub-classes
 
 class Person {
 	constructor(name, yearOfBirth, job) {
@@ -302,11 +303,45 @@ const sanjay = new Artist('Sanjay', 1993, 'Carnatic Vocalist', 10, 5);
 
 sanjay.calculateAge();
 sanjay.wonGrammy();
+*/
 
 
 
+//Method overriding
 
+class Person {
+	constructor(name, yearOfBirth, job) {
+		this.name = name;
+		this.yearOfBirth = yearOfBirth;
+		this.job = job;
+	}
+	calculateAge() {
+		var age = new Date().getFullYear() - this.yearOfBirth;
+		console.log(age);
+	}
+	doSomething() {
+		console.log('Doing something.....');
+	}
+}
 
+class Artist extends Person {
+	constructor(name, yearOfBirth, job, noOfAlbums, noOfGrammys) {
+		super(name, yearOfBirth, job);
+		this.noOfAlbums = noOfAlbums;
+		this.noOfGrammys = noOfGrammys;
+	}
+	wonGrammy() {
+		this.noOfGrammys++;
+		console.log(this.noOfGrammys);
+	}
+	doSomething() {
+		console.log('Practicing music.....');
+	}
+}
+
+const sanjay = new Artist('Sanjay', 1993, 'Carnatic Vocalist', 10, 5);
+
+sanjay.doSomething();
 
 
 
