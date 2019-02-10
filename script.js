@@ -209,6 +209,7 @@ console.log(personJson);
 
 
 
+/*
 //Classes
 
 class Person {
@@ -233,6 +234,34 @@ abhay.calculateAge();
 
 let vishnu = new Person('Vishnu', 'Vardhana', 1994);
 vishnu.calculateAge();
+*/
+
+
+
+
+//Object.assign()
+
+let firstName = {FirstName: 'Sanjay'};
+let lastName = {LastName: 'Nag'};
+let yearOfBirth = {YearOfBirth: 1993};
+
+const sanjay = Object.assign(firstName, lastName, yearOfBirth);
+
+console.log(sanjay);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
