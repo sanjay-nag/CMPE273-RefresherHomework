@@ -80,6 +80,7 @@ console.log(`My friend\'s name: ${myFriendsName}`);
 
 
 
+/*
 //Error
 
 const getItemDetailByItemId = itemId => {
@@ -97,3 +98,36 @@ getItemDetailByItemId(itemId).then(itemDetals => {
 }).catch(error => {
 	console.log(`Error occurred: ${error}`);
 });
+*/
+
+
+
+
+//Default Parameters
+
+function Nagas(
+	firstName,
+	yearOfBirth,
+	lastName = 'Nag',
+	nationality = 'Indian'
+) {
+	this.firstName = firstName;
+	this.yearOfBirth = yearOfBirth;
+	this.lastName = lastName;
+	this.nationality = nationality;
+}
+
+var sanjay = new Nagas('Sanjay', 1993);
+var abhay = new Nagas('Abhay', 1996, 'Rangan', 'American');
+
+console.log(sanjay);
+console.log(abhay);
+
+
+
+
+
+
+
+
+
