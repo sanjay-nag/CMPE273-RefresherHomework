@@ -40,7 +40,7 @@ document.querySelector('.key-copy').addEventListener('copy', ()  => {
 
 
 
-
+/*
 //Arrays
 
 const ragas = ['Megharanjani', 'Manoranjani', 'Kalyani', 'Chittaranjani', 'Mohana', 'Sivaranjani'];
@@ -50,4 +50,20 @@ ragas.forEach(raga => {
 		console.log(raga);
 	}
 });
+*/
+
+
+
+
+
+
+//Regular Expression
+
+const raga = 'Megharanjani belongs to a family of Ranjani ragas';
+const ranjaniRagasRegEx = new RegExp('ranjani', 'gi');
+
+while((array = ranjaniRagasRegEx.exec(raga)) !== null) {
+console.log(`\'${array[0]}\' found at position ${parseInt(array.index)+1}`)
+}
+
 
