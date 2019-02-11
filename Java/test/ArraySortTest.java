@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 class ArraySortTest {
 
     @Test
-    void bubbleSort() {
+    void testBubbleSort() {
         ArraySort arraySort = new ArraySort();
         Integer[] arrayToSort = {34, 34, 332, 12, 98, 123};
 
