@@ -19,7 +19,6 @@ public class StacksPalindrome {
         } else {
             System.out.println("Enter a proper string");
         }
-
     }
 
     public static int isPalindrome(String inputString) {
