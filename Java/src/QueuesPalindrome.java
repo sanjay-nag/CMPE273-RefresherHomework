@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class QueuesPalindrome {
 
     public static void main(String[] args) {
-//        System.out.println("Enter a string to check if it's a palindrome ");
-//
-//        Scanner scanner = new Scanner(System.in);
-//        String inputString = scanner.nextLine();
-//
-//        Integer palindrome = isPalindrome(inputString);
-//
-//            if(palindrome == 1) {
-//            System.out.println("Is a palindrome");
-//        } else if(palindrome == 0) {
-//            System.out.println("Not a palindrome");
-//        } else {
-//            System.out.println("Enter a proper string");
-//        }
+        System.out.println("Enter a string to check if it's a palindrome ");
+
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+
+        Integer palindrome = isPalindrome(inputString);
+
+            if(palindrome == 1) {
+            System.out.println("Is a palindrome");
+        } else if(palindrome == 0) {
+            System.out.println("Not a palindrome");
+        } else {
+            System.out.println("Enter a proper string");
+        }
     }
 
     public static int isPalindrome(String inputString) {
